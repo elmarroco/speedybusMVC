@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mercadopago/dx-php": "1.2.1",
+        "stripe/stripe-php": "^7.12",
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
