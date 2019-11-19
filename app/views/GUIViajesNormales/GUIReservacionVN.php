@@ -41,6 +41,7 @@
                 <input type="number" class="form-control" name="cantidad" id="cantidad" min="1" max="10">
               </div>
             </div>
+            <input type="hidden" value="<?php echo $data['itinerario'] ?>" name="id_itinerario">
             <input class="btn btn-success btn-block" type="submit" value="Proceder al pago">
           </form>
         </div>

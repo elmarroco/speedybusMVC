@@ -53,8 +53,13 @@ class GestorViajeNormal
     return $this->db->resultset();
   }
 
-  public function generarReservacion($nombre, $apellidop, $apellidom, $email, $descripcion, $precio_unitario, $cantidad = 1) {
-
+  public function generarReservacion($nombre, $apellidop, $apellidom, $email, $descripcion, $precio_unitario, $cantidad = 1, $id_itinerario) {
+    // $this->db->query("INSERT INTO reservaciones(nombre, apeelidop, apellidom, email, id_itinerario, cantidad ) 
+    // VALUES(:nombre, :apeelidop, :apellidom, :email, :id_itinerario, :cantidad)");
+    // $this->db->bind('id', $id_itinerario);
+    // $this->db->execute();
+    // $itinerario = $this->db->resultset();
+    
   }
 
   public function enviarComprobante($nombre, $apellido, $email, $descripcion, $precio_unitario, $cantidad = 1)

@@ -61,17 +61,18 @@ class OViajesNormales extends Controller
     $apellidop = $_POST['apellidop'];
     $apellidom = $_POST['apellidom'];
     $email = $_POST['email'];
+    $id_itinerario = $_POST['id_itinerario'];
     $precio = 500.0;
     $cantidad = $_POST['cantidad'];
     $descripcion = "";
 
     $GestorViajeNormal = new GestorViajeNormal;
     // Generar reservacion
-    
+    $GestorViajeNormal->generarReservacion($nombre, $apellidop, $apellidop, $email, $descripcion, $precio, $cantidad, $id_itinerario);
     // Generar y enviar comprobante de reservacion
     $GestorViajeNormal->enviarComprobante($nombre, $apellidop, $email, $descripcion, $precio, $cantidad);
     // Genrar link de pago
-    $linkpago = $GestorViajeNormal->pago($nombre, $apellidop, $email, "Viaje", $precio, $cantidad);
+    $linkpago = $GestorViajeNormal->pago($nombre, $apellidop, $email, $descripcion, $precio, $cantidad);
 
 
     //Set Data
