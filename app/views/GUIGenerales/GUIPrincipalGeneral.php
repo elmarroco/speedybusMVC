@@ -24,7 +24,7 @@
                                 <select id="my-select" class="form-control" name="origen">
                                     <option selected="true" disabled="disabled">Selecciona el origen</option>
                                     <?php foreach ($data['origenes'] as $origen) : ?>
-                                        <option><?php echo $origen ?></option>
+                                        <option value="<?php echo $origen['id'] ?>"><?php echo $origen['origen'] ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -33,7 +33,7 @@
                                 <select id="my-select" class="form-control" name="destino">
                                     <option selected="true" disabled="disabled">Selecciona el destino</option>
                                     <?php foreach ($data['destinos'] as $destino) : ?>
-                                        <option><?php echo $destino ?></option>
+                                        <option value="<?php echo $destino['id'] ?>"><?php echo $destino['destino'] ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
